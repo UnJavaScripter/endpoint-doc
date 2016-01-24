@@ -1,0 +1,84 @@
+.end-point-container{
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12);
+    padding: 1em;
+    background-color: white;
+    margin-top: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+.end-point-container>nav>.url{
+    margin-left: 1em;
+}
+.end-point-container>nav>.url>a{
+    text-decoration: none;
+}
+.end-point-container>nav>.url>a>.base{
+    color: #B6B6B6;
+    font-size: smaller;
+}
+
+.end-point-container>nav>.url>a>.endpoint{
+    color: #3F51B5;
+}
+
+.end-point-container>nav>.method{
+    border-radius: 3px;
+    padding: 0.4em;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.end-point-container>nav>.method.get{
+    background-color: #00E676;
+}
+
+.end-point-container>nav>.method.post{
+    background-color: #F4511E;
+}
+
+
+.end-point-container>nav>.method.put{
+    background-color: #6D4C41;
+}
+
+
+.end-point-container>nav>.method.patch{
+    background-color: #424242;
+}
+
+
+.end-point-container>nav>.method.delete{
+    background-color: #ff1744;
+}
+
+
+.end-point-container>nav>.method.options{
+    background-color: #78909C;
+}
+
+
+
+.end-point-container>.no-params-needed{
+    color: #B6B6B6;
+    margin-left: 1em;
+}
+
+
+.end-point-container>.pseudo-table{
+    color: #212121;
+    margin-bottom: 2em;
+}
+
+.end-point-container>.pseudo-table>div{
+    padding: 0.3em;
+}
+
+.end-point-container>.pseudo-table>.pseudo-table-headers{
+    color: #727272;
+    border-bottom: 1px solid #B6B6B6;
+}
+.end-point-container>.pseudo-table>.pseudo-table-elements:nth-child(even){
+    background-color: aliceblue;
+}

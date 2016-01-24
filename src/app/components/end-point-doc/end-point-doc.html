@@ -1,0 +1,3 @@
+<div *ngFor="#endPoint of endpointsArr; #i = index">
+    <end-point [url]="endPoint.url" [method]="endPoint.method" [params]="endPoint.params" [response]="endPoint.response"></end-point>
+</div>

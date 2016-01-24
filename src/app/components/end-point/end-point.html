@@ -1,0 +1,65 @@
+<div class="end-point-container">
+    <nav 
+        layout-xs="column" layout-align-xs="center stretch"
+        layout-gt-xs="row" layout-align-gt-xs="space-between center"
+    >
+        
+        <h2 class="url">
+            <a [href]="(url.base)+(url.endpoint)">
+                <span class="base">{{url.base}}</span>
+                <span class="endpoint">{{url.endpoint}}</span>
+            </a>
+        </h2>
+
+        <span class="method" ngClass="{{method}}" layout-xs="row" layout-align-xs="center center">
+            {{method | uppercase}}
+        </span>
+        
+    </nav>
+
+    <h3>Params:</h3>
+
+    <div class="pseudo-table" layout="column" *ngIf="params.length>0">
+        <div class="pseudo-table-headers" layout="row" layout-align="space-between center" >
+            <div flex-xs="40" flex-sm="30" flex-gt-sm="20">Name</div>
+            <div flex-xs="40" flex-sm="30" flex-gt-sm="20">Type</div>
+            <div flex>Description</div>
+        </div>
+
+        <div  class="pseudo-table-elements"
+              *ngFor="#param of params; #i = index" 
+              layout="row" layout-align="space-between center"
+        >
+            <div flex-xs="40" flex-sm="30" flex-gt-sm="20">{{param.name}}</div>
+            <div flex-xs="40" flex-sm="30" flex-gt-sm="20">{{param.type}}</div>
+            <div flex>{{param.description}}</div>
+
+        </div>
+    </div>
+    <div *ngIf="!params.length" class="no-params-needed">
+        <h3>This end point does not require any params</h3>
+    </div>
+
+    <h3>Response:</h3>
+
+    <div class="pseudo-table" layout="column">
+        <div class="pseudo-table-headers" layout="row" layout-align="space-between center" >
+            <div flex-xs="40" flex-sm="30" flex-gt-sm="20">Name</div>
+            <div flex-xs="40" flex-sm="30" flex-gt-sm="20">Type</div>
+            <div flex>Description</div>
+        </div>
+
+        <div  class="pseudo-table-elements"
+              *ngFor="#res of response; #i = index" 
+              layout="row" layout-align="space-between center"
+        >
+            <div flex-xs="40" flex-sm="30" flex-gt-sm="20">{{res.name}}</div>
+            <div flex-xs="40" flex-sm="30" flex-gt-sm="20">{{res.type}}</div>
+            <div flex>{{res.description}}</div>
+
+        </div>
+    </div>
+
+
+
+</div>

@@ -1,0 +1,69 @@
+[
+    {
+        "method": "get",
+        "url": {
+            "base": "https://mynotlameatallsite.geocities.com",
+            "endpoint": "/users/:userId"
+        },
+        "params": [
+            
+        ],
+        "response": [
+            {
+                "name": "name",
+                "type": "String",
+                "description": "The name of that user"
+            },
+            {
+                "name": "pic",
+                "type": "String",
+                "description": "The url of that user's profile pic"
+            },
+            {
+                "name": "role",
+                "type": "Number",
+                "description": "The role number ID"
+            }
+        ]
+    },{
+        "method": "post",
+        "url": {
+            "base": "https://mynotlameatallsite.geocities.com",
+            "endpoint": "/thing/that/:thingId"
+        },
+        "params": [
+            {
+                "name": "cardId",
+                "type": "Number",
+                "description": "The ID of the credit card to be used"
+            },
+            {
+                "name": "itemId",
+                "type": "Number",
+                "description": "The ID of the item to purchase" 
+            },
+            {
+                "name": "address",
+                "type": "String",
+                "description": "The address where we should send the item"  
+            },
+            {
+                "name": "giftWrap",
+                "type": "Boolean",
+                "description": "Should we wrap the box?"    
+            }
+        ],
+        "response": [
+            {
+                "name": "transactionId",
+                "type": "String",
+                "description": "The id of the current transaction"
+            },
+            {
+                "name": "transactionStatus",
+                "type": "Number",
+                "description": "The current status of the transaction you've just sent"
+            }
+        ]
+    }
+]
